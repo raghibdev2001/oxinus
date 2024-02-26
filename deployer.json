@@ -1,0 +1,5 @@
+{
+    "name":"node-express-typeorm-oauth2",
+    "framework": "node",
+    "type": "node-express-typeorm-oauth2"
+}

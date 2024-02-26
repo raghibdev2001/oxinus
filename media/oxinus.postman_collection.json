@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "3f921f81-22c9-4f7f-8abf-bd8d9b200e19",
+		"name": "oxinus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2586111"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"Raghib\",\r\n    \"lastname\":\"Khesal\",\r\n    \"email\":\"test@yopmail.com\",\r\n    \"phone\":\"123123211313112\",\r\n    \"password\":\"PassWord\",\r\n    \"birthday\":\"2022-12-14\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "{{api_url}}/api/accounts/register",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"email\":\"test@yopmail.com\",\r\n    \"password\":\"PassWord\"\r\n}"
+				},
+				"url": {
+					"raw": "{{api_url}}/api/accounts/login",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0NDczNjJkLTk2ODQtNDliMi1hODFjLWJkNDRhYjJkMDc3ZiIsImVtYWlsIjoidGVzdEB5b3BtYWlsLmNvbSIsImlhdCI6MTcwODkwNTYzNiwiZXhwIjoxNzA4OTkyMDM2fQ.HRN1A3Zz2cGi5zyli2MFEopdH-_bQPcJvitGc9nL_Rg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0NDczNjJkLTk2ODQtNDliMi1hODFjLWJkNDRhYjJkMDc3ZiIsImVtYWlsIjoidGVzdEB5b3BtYWlsLmNvbSIsImlhdCI6MTcwODkwNTYzNiwiZXhwIjoxNzA4OTkyMDM2fQ.HRN1A3Zz2cGi5zyli2MFEopdH-_bQPcJvitGc9nL_Rg\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{api_url}}/api/accounts/logout",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Session",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0NDczNjJkLTk2ODQtNDliMi1hODFjLWJkNDRhYjJkMDc3ZiIsImVtYWlsIjoidGVzdEB5b3BtYWlsLmNvbSIsImlhdCI6MTcwODkwNTYzNiwiZXhwIjoxNzA4OTkyMDM2fQ.HRN1A3Zz2cGi5zyli2MFEopdH-_bQPcJvitGc9nL_Rg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{api_url}}/api/accounts/checkSession",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"checkSession"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0NDczNjJkLTk2ODQtNDliMi1hODFjLWJkNDRhYjJkMDc3ZiIsImVtYWlsIjoidGVzdEB5b3BtYWlsLmNvbSIsImlhdCI6MTcwODkwNTYzNiwiZXhwIjoxNzA4OTkyMDM2fQ.HRN1A3Zz2cGi5zyli2MFEopdH-_bQPcJvitGc9nL_Rg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"accountID\": \"9ae27185-8186-4bcc-ac74-95999b83ea76\",\r\n        \"firstname\": \"Testraghib\",\r\n        \"lastname\": \"testkhesal\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{api_url}}/api/accounts/edit",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Accounts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0NDczNjJkLTk2ODQtNDliMi1hODFjLWJkNDRhYjJkMDc3ZiIsImVtYWlsIjoidGVzdEB5b3BtYWlsLmNvbSIsImlhdCI6MTcwODkwNTYzNiwiZXhwIjoxNzA4OTkyMDM2fQ.HRN1A3Zz2cGi5zyli2MFEopdH-_bQPcJvitGc9nL_Rg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"accountID\": \"9ae27185-8186-4bcc-ac74-95999b83ea76\",\r\n        \"firstname\": \"Testraghib\",\r\n        \"lastname\": \"testkhesal\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{api_url}}/api/accounts/all",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
